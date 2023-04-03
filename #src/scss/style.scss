@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+@import 'mixins';
+@import 'fonts';
+@import 'icons';
+
+$minWidth: 320px;
+$maxWidth: 1920;
+$maxWidthContainer: 1920;
+$md1: $maxWidthContainer + 30;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 575.98;
+
+$fontFamily: 'Open Sans', sans-serif;
+
+@import 'null';
+
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+body.lock {
+    overflow: hidden !important;
+}
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease 0s;
+    z-index: 0;
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@import './sections/header';
+@import './sections/main';
+@import './sections/sidebar';
+@import './sections/content';
+@import './sections/player';
+@import './sections/footer';
